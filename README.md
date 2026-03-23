@@ -1,25 +1,24 @@
 # 🏥 Sistema de Gestão de Clínica Médica
 
-Este projeto é desenvolvido para a disciplina de **Construção de Software I** do curso de Engenharia de Software (5º Semestre). O objetivo é aplicar conceitos avançados de Programação Orientada a Objetos e Padrões de Projeto em um cenário real de gestão clínica.
+Este projeto é uma **API REST** para gerenciamento de pacientes e fichas médicas, desenvolvida com **Spring Boot**, **Spring Data JPA** e banco de dados **H2**. O objetivo é explorar relacionamentos `@OneToOne` e a separação entre dados cadastrais e clínicos.
 
-## 🚀 Tecnologias Utilizadas
-* **Linguagem:** Java
-* **IDE:** IntelliJ IDEA / NetBeans
-* **Interface Gráfica:** Java Swing
-* **Banco de Dados:** PostgreSQL (via DBeaver)
-* **Sistema Operacional de Desenvolvimento:** Linux Fedora
+### 🚀 Como Rodar o Projeto
 
-## 🛠️ Padrões de Projeto Implementados
-- [x] **Singleton:** Utilizado para garantir uma única instância de conexão com o banco de dados e componentes globais.
-- [ ] **Factory/Adapter:** (Em desenvolvimento) para abstração de tipos de exames e medicamentos.
+**Pré-requisitos:** * Ter o **Java 21** instalado.
 
-## 📂 Estrutura do Projeto
-* `src/`: Contém todo o código-fonte Java.
-* `.gitignore`: Configurado para ignorar arquivos de configuração da IDE (`.idea/`, `.iml`) e binários (`.class`).
-* `README.md`: Documentação principal do projeto.
+1. **Execute a aplicação:**
+   * **Linux/Mac:** `./mvnw spring-boot:run`
+   * **Windows:** `mvnw.cmd spring-boot:run`
 
-## ⚙️ Como Executar
-1. Certifique-se de ter o JDK 17 ou superior instalado no seu Linux/Windows.
-2. Clone o repositório:
-   ```bash
-   git clone git@github.com:LuizSantos-study/Construcao_de_Software1.git
+2. **Acesso:** A API estará disponível em: [http://localhost:8080](http://localhost:8080)
+
+---
+
+### 🛠️ Tecnologias e Configuração
+
+* **Framework:** Spring Boot 3.5.11.
+* **Persistência:** Spring Data JPA com Hibernate.
+* **Banco de Dados:** H2 (Baseada em arquivo em `./data/db-api`).
+* **Console H2:** Acessível em `/h2-console` 
+  * **JDBC URL:** `jdbc:h2:file:./data/db-api`
+* **Validação:** Bean Validation para integridade de dados.
